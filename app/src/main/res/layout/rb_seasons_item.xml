@@ -5,13 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/ivNewsPicture"
-        android:layout_width="match_parent"
-        android:layout_height="260dp" />
-
     <TextView
-        android:id="@+id/tv_news_header"
+        android:id="@+id/tvSeasonheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -20,12 +15,12 @@
         android:textStyle="bold"
         tools:text="Header" />
 
-    <TextView
-        android:id="@+id/tv_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
-        android:textSize="20sp"
-        tools:text="Body" />
+    <ImageView
+        android:id="@+id/ivSeasonPicture"
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
+
+
+
+
 </LinearLayout>

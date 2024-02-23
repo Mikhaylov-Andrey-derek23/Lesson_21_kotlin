@@ -13,7 +13,7 @@ class FirstFragment : Fragment() {
 
     private var bidding: FragmentFirstBinding? = null
 
-    private var addapter: NewsAddapter? = null
+    private var adapter: SeasonsAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,36 +25,33 @@ class FirstFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        InitNewsAddpter()
+        InitSeasonAddpter()
 
     }
 
-    private fun InitNewsAddpter() {
-        addapter = NewsAddapter()
-        addapter?.newList = listOf(
-            News(
-                header = "Header 1",
-                text = "textt text text",
-                Image = "https://directus.localazy.com/uploads/_/originals/29d67d0c-3123-4feb-87d3-cec4d700191e.jpeg"
+    private fun InitSeasonAddpter() {
+        adapter = SeasonsAdapter()
+        adapter?.newList = listOf(
+            Seasons(
+                header = "Winter",
+                image = "https://w.forfun.com/fetch/9c/9cd5510ed58226f15fcc7a0348193c89.jpeg"
             ),
-            News(
-                header = "Header 2",
-                text = "textt text text",
-                Image = "https://directus.localazy.com/uploads/_/originals/29d67d0c-3123-4feb-87d3-cec4d700191e.jpeg"
+            Seasons(
+                header = "Spring",
+                image = "https://image.winudf.com/v2/image1/Y29tLmhkd2Nhci5uZXdzcHJpbmdfc2NyZWVuXzRfMTU2Njk5ODg0NV8wNjk/screen-4.jpg?fakeurl=1&type=.jpg"
             ),
-            News(
-                header = "Header 3",
-                text = "textt text text",
-                Image = "https://directus.localazy.com/uploads/_/originals/29d67d0c-3123-4feb-87d3-cec4d700191e.jpeg"
+            Seasons(
+                header = "Summer",
+                image = "https://all-aforizmy.ru/wp-content/uploads/2022/02/scale_1200-3.jpg"
             ),
-            News(
-                header = "Header 4",
-                text = "textt text text",
-                Image = "https://directus.localazy.com/uploads/_/originals/29d67d0c-3123-4feb-87d3-cec4d700191e.jpeg"
+            Seasons(
+                header = "Autumn",
+                image = "https://img2.akspic.ru/attachments/originals/8/2/0/3/0/103028-video-osennyaya_okraska_listev-zheltyj-list-dikaya_mestnost-2880x1800.jpg"
             )
 
+
         )
-        bidding?.rvNews?.adapter = addapter
-        bidding?.rvNews?.layoutManager = LinearLayoutManager(requireContext())
+        bidding?.rvSeason?.adapter = adapter
+        bidding?.rvSeason?.layoutManager = LinearLayoutManager(requireContext())
     }
 }
